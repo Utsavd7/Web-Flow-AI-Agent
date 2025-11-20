@@ -1,0 +1,8 @@
+services:
+  agent:
+    build: .
+    volumes:
+      - ./captured_workflows:/app/captured_workflows
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    command: python -m src.cli generate --headless
