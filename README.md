@@ -6,7 +6,7 @@
 
 **Web Flow AI Agent** is an intelligent AI agent designed to navigate real-world websites, perform complex tasks, and capture rich datasets of UI states. It combines the power of **Playwright** for automation with **OpenAI's GPT-4o** for reasoning, enabling it to handle dynamic web environments without brittle hardcoded selectors.
 
-## 🎯 Project Context (For Recruiters)
+## 🎯 Project Context
 
 **The Challenge**: Traditional web automation (Selenium/Playwright) relies on hardcoded selectors (e.g., `div > .btn-primary`), which makes scripts brittle. If a website updates its UI, the bot breaks.
 
