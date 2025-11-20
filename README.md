@@ -17,6 +17,28 @@
 
 This approach allows the agent to adapt to different layouts and website updates automatically, mimicking human behavior.
 
+### The Problem: Non-URL States
+Not every UI state has a unique URL. For example, "creating a project" involves:
+*   The project list page (has a URL)
+*   The "Create Project" button state
+*   The create modal (no URL)
+*   The form fields (no URL)
+
+This system navigates the live application and captures these states programmatically on the fly, ensuring a complete dataset even for complex, single-page application interactions.
+
+## ✅ Deliverables Checklist
+
+This project fulfills the following requirements:
+
+- [x] **Code**: A complete UI state capture system (Python + Playwright + LLM).
+- [x] **Loom/Video**: A split-screen demo showing the agent's browser view and internal thought process.
+- [x] **Dataset**: Captured UI states for 4 diverse tasks across GitHub, Python.org, and Hacker News.
+    -   *Task 1*: GitHub Search
+    -   *Task 2*: GitHub Issues Navigation
+    -   *Task 3*: Python.org Search
+    -   *Task 4*: Hacker News Navigation
+- [x] **Generalizability**: The system uses an LLM to decide actions at runtime, not hardcoded scripts.
+
 ## 🎥 Demo
 
 <video src="assets/demo.mp4" controls="controls" style="max-width: 100%;">
