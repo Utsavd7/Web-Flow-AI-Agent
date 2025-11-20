@@ -14,3 +14,6 @@ captured_workflows/
 *.webm
 *.png
 *.json
+
+!assets/
+!assets/*.mp4
