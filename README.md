@@ -6,17 +6,26 @@
 
 **Web Flow AI Agent** is an intelligent AI agent designed to navigate real-world websites, perform complex tasks, and capture rich datasets of UI states. It combines the power of **Playwright** for automation with **OpenAI's GPT-4o** for reasoning, enabling it to handle dynamic web environments without brittle hardcoded selectors.
 
+## 🎯 Project Context (For Recruiters)
+
+**The Challenge**: Traditional web automation (Selenium/Playwright) relies on hardcoded selectors (e.g., `div > .btn-primary`), which makes scripts brittle. If a website updates its UI, the bot breaks.
+
+**The Solution**: This project demonstrates a **Generalizable AI Agent**. Instead of following a rigid script, the agent:
+1.  **Observes**: Captures the accessibility tree and interactive elements of the page.
+2.  **Thinks**: Uses an LLM (GPT-4o) to understand the context and decide the next best action based on a high-level goal (e.g., "Search for AutoGPT").
+3.  **Acts**: Executes the action dynamically.
+
+This approach allows the agent to adapt to different layouts and website updates automatically, mimicking human behavior.
+
 ## 🚀 Features
 
 *   **🧠 AI-Powered Navigation**: Uses LLMs to understand page context and make decisions.
 *   **📸 Rich Dataset Capture**: Records high-res screenshots, DOM elements, and action metadata.
 *   **🎥 Split-Screen Visualization**: Generates demo videos showing the browser alongside the agent's "thought process" (logs).
 *   **🛡️ Robust Heuristics**: Fallback logic for common sites (GitHub, Python.org, Hacker News).
-*   **🐳 Docker Ready**: Fully containerized for easy deployment.
+*   **🛡️ Robust Heuristics**: Fallback logic for common sites (GitHub, Python.org, Hacker News).
 
 ## 🛠️ Installation
-
-### Local Setup
 
 1.  **Clone the repository**:
     ```bash
@@ -41,13 +50,6 @@
     ```env
     OPENAI_API_KEY=sk-...
     ```
-
-### Docker Setup
-
-Simply run:
-```bash
-docker-compose up --build
-```
 
 ## 💻 Usage
 
@@ -76,16 +78,16 @@ All data is saved to `captured_workflows/`:
 
 ```mermaid
 graph TD
-    A[CLI] --> B[Generate Dataset]
-    B --> C[Browser Manager (Playwright)]
-    B --> D[Agent Brain (LLM)]
-    C <--> E[Websites]
-    D --> F[Decisions]
+    A["CLI"] --> B["Generate Dataset"]
+    B --> C["Browser Manager (Playwright)"]
+    B --> D["Agent Brain (LLM)"]
+    C <--> E["Websites"]
+    D --> F["Decisions"]
     F --> C
-    C --> G[State Capturer]
-    G --> H[Screenshots & Logs]
-    H --> I[Combine Videos]
-    I --> J[Final Demo.mp4]
+    C --> G["State Capturer"]
+    G --> H["Screenshots & Logs"]
+    H --> I["Combine Videos"]
+    I --> J["Final Demo.mp4"]
 ```
 
 ## 📄 License
