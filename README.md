@@ -19,9 +19,6 @@ This approach allows the agent to adapt to different layouts and website updates
 
 ## 🎥 Demo
 
-https://github.com/user-attachments/assets/demo.mp4
-*(Note: GitHub renders mp4s in issues/PRs, but for READMEs, it's best to link or use a relative path if supported. Standard markdown video embedding is tricky on GitHub. I will use a relative link which GitHub renders as a download/link, or I can try the HTML video tag which sometimes works.)*
-
 <video src="assets/demo.mp4" controls="controls" style="max-width: 100%;">
 </video>
 
